@@ -1,0 +1,89 @@
+<main>
+  <section class="first_section">
+    <div class="container-fluid g-0">
+      <div class="row g-0">
+        <div class="col-7">
+          <div class="first_section_left">
+            <img src="assets\images\bg-boxes-first.png" alt="" />
+            <header>
+              <h1>Urban Fashion <span>*</span></h1>
+              <hr />
+              <h1 class="mt-5">
+                Find Your Own <br />
+                Style
+              </h1>
+              <p class="mt-1">
+                Find latest designed fashion clothes for you and your loved ones
+                and make yourself a stylish being. Because you deserve to be
+                stylish.
+              </p>
+            </header>
+          </div>
+        </div>
+        <div class="col-5 d-flex align-items-end">
+          <div class="first_section_right mb-2">
+            <img src="assets\images\banner-img.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="second_section">
+    <div class="container-fluid g-0">
+      <div class="row g-0">
+        <div class="col-12">
+          <ul class="black_stepper">
+            <li>READY TO WAER</li>
+            <li>UNSTICHED</li>
+            <li>WESTERN</li>
+            <li>MEN STICHED</li>
+            <li>MEN UNSTICHED</li>
+            <li>ACCESSORIES</li>
+          </ul>
+        </div>
+        <div class="col-12">
+          <ul class="white_stepper">
+            <li>MEN STICHED</li>
+            <li>ACCESSORIES</li>
+            <li>UNSTICHED</li>
+            <li>MEN UNSTICHED</li>
+            <li>READY TO WAER</li>
+            <li>WESTERN</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="third_section">
+    <div class="bg_img_right"></div>
+    <div class="bg_img_left"></div>
+    <div class="container">
+      <div class="row">
+        <div class="card_main">
+          <div
+            class="card_body"
+            *ngFor="let card of cardData; let i = index"
+            (mouseover)="handleHover(i, true)"
+            (mouseout)="handleHover(i, false)"
+            (click)="routeToCollection(card)"
+          >
+            <div
+              class="card-image"
+              [style.background-image]="'url(' + card.img1 + ')'"
+            ></div>
+            <!-- <div
+              class="card-image"
+              *ngIf="card.img1Loaded && card.img2Loaded"
+              [style.background-image]="
+                'url(' + (card.isHovered ? card.img2 : card.img1) + ')'
+              "
+            ></div> -->
+            <div class="card-content">
+              <h2>{{ card.title }}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

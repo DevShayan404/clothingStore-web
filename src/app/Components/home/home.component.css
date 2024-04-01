@@ -1,0 +1,209 @@
+main {
+  margin-top: 50px;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+/* -----------------first_section------------------ */
+.first_section {
+  height: calc(100vh - 55px);
+}
+.first_section_left {
+  position: relative;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first_section_left img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: calc(100vh - 60px);
+}
+.first_section_left header {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  z-index: 1;
+  /* border: 1px solid red; */
+}
+.first_section_left header hr {
+  margin: 0;
+  width: 40%;
+  height: 5px;
+  border-radius: 1rem;
+  background-color: var(--secondary-400);
+  opacity: 0.8;
+}
+.first_section_left header h1 {
+  font-size: 70px;
+  font-weight: var(--font-bolder);
+}
+.first_section_left header h1 span {
+  color: var(--primary-500);
+}
+.first_section_left header p {
+  font-size: var(--font-md);
+  width: 80%;
+  color: var(--font-gray);
+  text-align: justify;
+}
+
+.first_section_right {
+  width: 100%;
+  position: relative;
+}
+.first_section_right img {
+  width: 100%;
+}
+/* -----------------second_section------------------ */
+.second_section {
+  position: relative;
+}
+.second_section .black_stepper {
+  position: absolute;
+  top: 0;
+  left: -3%;
+  transform: rotate(355deg);
+  width: 105%;
+  z-index: 2;
+  background-color: black;
+  color: #fff;
+  height: 15vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 26px;
+  font-weight: var(--font-bolder);
+}
+.second_section .white_stepper {
+  position: absolute;
+  top: 0;
+  left: -3%;
+  transform: rotate(3deg);
+  width: 105%;
+  z-index: 1;
+  background-color: transparent;
+  color: var(--font-gray);
+  border: 2px solid var(--border-gray);
+  background-color: #fff;
+  height: 15vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 26px;
+  font-weight: var(--font-bolder);
+}
+
+.third_section {
+  margin-top: 100px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  position: relative;
+}
+.bg_img_right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-image: url("../../../assets/images/bg-boxes-first.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  width: 70%;
+  transform: rotate(180deg);
+}
+.bg_img_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../../assets/images/bg-boxes-first.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  width: 70%;
+  /* transform: rotate(180deg); */
+}
+.card_main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.card_body {
+  height: 183px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border: 0;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+.card-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+.card_body:nth-child(1) {
+  grid-column: span 3;
+  grid-row: span 1;
+  height: 100px;
+}
+.card_body:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2 / span 2;
+  height: 380px;
+}
+.card_body:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  height: 380px;
+}
+.card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-content h2 {
+  font-weight: var(--font-bolder);
+  color: #fff;
+}
+.card_body:hover .card-image {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.card_body:hover .card-content {
+  background-color: rgba(0, 0, 0, 0);
+}
+.card_body:hover .card-content h2 {
+  display: none;
+}

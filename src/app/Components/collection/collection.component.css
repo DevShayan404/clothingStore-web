@@ -1,0 +1,112 @@
+main {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.container-fluid {
+  width: 95%;
+}
+/* ------------------collection_first_section---------------------- */
+.col-2 h4 {
+  font-weight: var(--font-bolder);
+}
+.col-2 h4 hr {
+  margin: 0;
+  width: 60%;
+  height: 5px;
+  border-radius: 5rem;
+  background-color: var(--secondary-400);
+  opacity: 0.8;
+}
+::ng-deep.owl-theme .owl-nav {
+  margin-top: 0;
+  display: none;
+}
+.card {
+  width: max-content;
+  border: none;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 10px;
+}
+.card_img {
+  border-radius: 100%;
+  overflow: hidden;
+}
+.card_img img {
+  width: 100px;
+  height: auto;
+}
+.card_content h6 {
+  /* color: var(--primary-500); */
+  font-weight: var(--font-bold);
+  font-size: var(--font-sm);
+}
+/* ------------------collection_second_section---------------------- */
+.ant-select {
+  width: 40%;
+}
+.collection_second_section {
+  /* border: 1px solid red; */
+}
+
+.collection_second_section .card_wrapper {
+  width: 25%;
+}
+::ng-deep.ant-card-small > .ant-card-body {
+  padding: 0;
+  margin: 0;
+}
+.ant-card-bordered {
+  border: none;
+}
+.card_wrapper .list_card_img {
+  /* background-image: url('../../../assets/images/unstitched-list.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+  /* height: 50vh; */
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.card_wrapper .list_card_img img {
+  width: 100%;
+  height: 60vh;
+  transition: transform 0.8s ease-in-out;
+}
+.card_wrapper .list_card_img button {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  /* transform: translate(-50%, -2%); */
+  width: 90%;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 5px;
+  z-index: 10;
+  font-weight: var(--font-bold);
+  background-color: var(--black);
+  color: #fff;
+  opacity: 0;
+  transform: translate(-50%, 50%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.card_wrapper:hover .list_card_img button {
+  opacity: 1;
+  transform: translate(-50%, -20%);
+}
+.card_wrapper:hover .list_card_img img {
+    transform: scale(1.2);
+  }
+.card_wrapper .list_card_content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 8px;
+}
+.card_wrapper .list_card_content strong {
+  font-size: var(--font-md);
+  text-transform: uppercase;
+  text-align: center;
+}

@@ -1,0 +1,88 @@
+<main>
+  <section class="collection_first_section">
+    <div class="container-fluid mt-5">
+      <div class="row d-flex align-items-center pt-4">
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <h4>
+            {{ paramName }} <br />
+            <hr />
+          </h4>
+        </div>
+        <div class="col-10">
+          <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let slide of headers">
+              <ng-template carouselSlide>
+                <div class="card">
+                  <div class="card_img">
+                    <img src="assets\images\unstitched.jpg" alt="" />
+                  </div>
+                  <div class="card_content">
+                    <h6>Unstitched</h6>
+                  </div>
+                </div>
+              </ng-template>
+            </ng-container>
+          </owl-carousel-o>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="collection_second_section">
+    <div class="container-fluid">
+      <div class="row pt-3 d-flex justify-content-between align-items-center">
+        <div class="col">
+          <nz-breadcrumb>
+            <nz-breadcrumb-item>
+              <a [routerLink]="['../../']">Home</a>
+            </nz-breadcrumb-item>
+            <nz-breadcrumb-item>{{ paramName }}</nz-breadcrumb-item>
+          </nz-breadcrumb>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a person">
+            <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
+            <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
+            <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
+          </nz-select>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row pt-3 pb-4 g-3 d-flex flex-wrap">
+        <div
+          class="card_wrapper"
+          *ngFor="let list of cardList"
+          (click)="routeToProductDetail(list)"
+        >
+          <nz-ribbon
+            *ngIf="list.badge !== null"
+            [nzText]="list.badge"
+            nzColor="volcano"
+          >
+            <nz-card nzSize="small" nzHoverable>
+              <div class="list_card_img">
+                <img [src]="list.src" alt="" />
+                <button>Add to Cart</button>
+              </div>
+              <div class="list_card_content">
+                <strong>{{ list.name }}</strong>
+                <span>{{ list.currency }}. {{ list.price }}</span>
+              </div>
+            </nz-card>
+          </nz-ribbon>
+          <nz-card *ngIf="list.badge === null" nzSize="small" nzHoverable>
+            <div class="list_card_img">
+              <img [src]="list.src" alt="" />
+              <button>Add to Cart</button>
+            </div>
+            <div class="list_card_content">
+              <strong>{{ list.name }}</strong>
+              <span>{{ list.currency }}. {{ list.price }}</span>
+            </div>
+          </nz-card>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

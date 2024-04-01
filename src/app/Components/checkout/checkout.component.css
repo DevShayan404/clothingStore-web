@@ -1,0 +1,94 @@
+main {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.container-fluid {
+  width: 95%;
+  margin-top: 80px;
+}
+/* ----------------------checkout_form--------------------------- */
+
+.ant-form-item {
+  margin: 0;
+}
+.ant-space-vertical {
+  width: 100%;
+}
+.ant-select {
+  width: 100%;
+}
+.ant-input-focused,
+.ant-input:focus {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 2px var(--primary-100);
+}
+.ant-input:hover {
+  border-color: var(--primary-500);
+  border-right-width: 1px;
+}
+::ng-deep.ant-select-focused:not(.ant-select-disabled).ant-select:not(
+    .ant-select-customize-input
+  )
+  .ant-select-selector {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 2px var(--primary-100);
+}
+::ng-deep.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: var(--primary-500);
+}
+::ng-deep.ant-select-item-option-selected:not(
+    .ant-select-item-option-disabled
+  ) {
+  background-color: var(--primary-100);
+}
+::ng-deep.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: var(--primary-500);
+  border-color: var(--primary-500);
+}
+::ng-deep.ant-checkbox-input:focus + .ant-checkbox-inner,
+::ng-deep.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+::ng-deep.ant-checkbox:hover .ant-checkbox-inner {
+  border-color: var(--primary-500);
+}
+::ng-deep.ant-checkbox-checked::after {
+  border: 1px solid var(--primary-500);
+}
+.ant-btn {
+  height: 36px;
+  padding: 5px 15px;
+  background: var(--black);
+  font-weight: var(--font-bold);
+  color: #fff;
+  width: 100%;
+}
+.ant-btn:focus,
+.ant-btn:hover {
+  border-color: var(--black);
+}
+
+.checkout_form {
+  width: 90%;
+}
+.sub_header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub_header h5 {
+  display: flex;
+  align-items: start;
+  gap: 5px;
+}
+.sub_header a {
+  color: var(--secondary-400);
+}
+.input_divider {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+}
+.input_divider nz-form-item.ant-form-item {
+  transition: none;
+  flex-basis: 50%;
+}
